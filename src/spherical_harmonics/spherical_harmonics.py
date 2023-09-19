@@ -196,7 +196,7 @@ class SphericalHarmonicsLevel:
         c = (
             B.ones(
                 X.dtype,
-                *(X.shape[0], 1),
+                *(*X.shape[:-1], 1),
             )
             * self.gegenbauer.value_at_1
         )  # [N, 1]
